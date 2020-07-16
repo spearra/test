@@ -12,8 +12,48 @@
     <b>My name is Rachel</b>
     <br><h2>My friend is Ava</h2>
     <i><u>THis is fun</u></i>
+    <p id="welcome">Welcome</p>
+    <button onclick= "sayHello()"> Click me! </button>
+    <br><button onclick= "count()"> Counter! </button>
+    <p id="number">0</p>
+    <br><button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <br><input type="text" onkeyup="input(this)">
+    <br><p id="output"></p>
+
+
+
     <p>Hi, this is a fun website that I made. It's really cool to refresh my knowledge on html </p>
     <a href="https://drive.google.com/drive/u/0/folders/1XPdYu8MeKI9rMdT-pYLmQnqoTKIzT2es">This is a link</a>
     <img src="gay" alt= "gay pride flag" width = "128" height = "128">
+    <script>
+        var name = prompt("What's your name?");
+        document.getElementById("welcome").innerHTML = "Welcome " + name;
+        function sayHello(){
+	        alert("Hello");
+        }
+        var counter = 0;
+        function count(){
+            counter = counter + 1;
+        document.getElementById("number").innerHTML = counter;
+        }
+        function myFunction() {
+            var hour = new Date().getHours(); 
+            var greeting;
+            if (hour < 18) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+            document.getElementById("demo").innerHTML = greeting;
+        }
+        function input(textbox) {
+            var output = document.getElementById('output');
+            output.innerHTML = textbox.value;
+        }
+
+
+    </script>
+    
 </body>
 </html>
